@@ -14,10 +14,13 @@ let candidateAnswers = [];
 let answer;
 let yAnswer;
 
+  questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "What is the minimum crew size for the ISS?"];
+
+  correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-  const input = require('readline-sync');
+
   candidateName = input.question("What is the candidate's name? ");
 
   console.log("Hello, " + candidateName + "!" + " " + "Welcome to the program!" )
@@ -26,9 +29,7 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-  questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "What is the minimum crew size for the ISS?"];
-
-  correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
+  
   
    let i = 0;
    while (i < questions.length){
@@ -45,25 +46,38 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-let responseAnswer = [candidateAnswers, correctAnswers];
-
-  for (let i = 0; i < responseAnswer.length; i++){
-    // console.log(responseAnswer);
-  }
 
   let grade;
   
   // assignment 3
+
+
   console.log(`Candidate Name: ${candidateName}`);
-  let questions = (`1) Who was the first American woman in space?`);
-  let yAnswer = (`Your Answer: ${candidateAnswer}`);
-  et cAnswer = (`Correct Answer: ${correctAnswer}`);
+
+  // let quiz = "";
+
+  for (let i = 0; i < questions.length; i++){
+      let currentquestion = questions[i];
+  let message = `${questions[i]}, Your Answer: ${candidateAnswers[i]}, Correct Answer: ${correctAnswers[i]}`;
+  console.log(message);
+
+  }
+
+  
+  
+  
+  
+  // console.log(`Candidate Name: ${candidateName}`);
+  // let questions = (`1) Who was the first American woman in space?`);
+  // let yAnswer = (`Your Answer: ${candidateAnswer}`);
+  // let cAnswer = (`Correct Answer: ${correctAnswer}`);
+
  
   //  let message = question;
   //  console.log(message);
 
 
-// message
+// message or response
   // array of questions
     // questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "What is the minimum crew size for the ISS?"];
   // array of candidateAnswers
