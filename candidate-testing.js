@@ -49,8 +49,6 @@ function gradeQuiz(candidateAnswers) {
 
 
   let grade;
-  
-  // assignment 3
 
   console.log(`\nCandidate Name: ${candidateName}`);
 
@@ -60,77 +58,22 @@ function gradeQuiz(candidateAnswers) {
   console.log(message1);
   }
   
-  
-  // (Number of Correct Answers) / (Number of Quiz Questions) * 100
-  
 
-  for ( let i = 1; i < candidateAnswers.count; i++){
-  }
-      if (candidateAnswers === correctAnswers) {
-         console.log(candidateAnswers);
-      }
+// I googled trying to figure out how to calculate and separate the correct answers from the incorrect answers out of the user (candidateAnswers). I couldn't think of way to do it. I can rationalize it in my and on paper, but I"m not sure how to convert that into code. I couldn't find any examples that online that were close to what I was trying to do. I had to turn in something. 
 
-  // let quizAnswers;
-  // let results;
+// my code reasoning would look like 
 
-  // if (candidateAnswers === correctAnswers) {
-    // quizAnswers++;
-   
+// calculate and subtract the correct answers from the wrong answers in candidateAnswers. That would give me "number of correct answers from the user".  I would use this formula     (Number of Correct Answers) / (Number of Quiz Questions) * 100  to get the percentage.  
 
-  // results = `${quizAnswers} out of ${questions.length}`;
-  // console.log(results);
+let score;
+let n = candidateAnswers - correctAnswers;
+score = (n / 5) * 100;
+console.log(score);
 
 
-
-
-  // let array;
-
-  // array = [0,1,2,3,4];
-  // // array = [0, 1, 2, 3, 4];
-  // let sum = 0;
-
-  // for (let i = 0; i < array.length; i++)
-  //   sum += array;
-  //   console.log(array + i);
-  
-
-
-  // let arrayTotal = [candidateAnswers];
-  // let sum = 0;
-
-  // for (let i = 0; i < arrayTotal.length; i++)
-  //   sum += arrayTotal[i];
-  
-  
-
-
-// message or response
-  // array of questions
-    // questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "What is the minimum crew size for the ISS?"];
-  // array of candidateAnswers
-    // let yAnswer = (`Your Answer: ${candidateAnswers}`);
-    // console.log(yAnswer);
-  // array of correctAnswers
-    //  let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
-    //  let cAnswer = (`Correct Answer: ${correctAnswers}`);
-    //  console.log(cAnswer);
-    
-
-   
 
   return grade;
-}
-
-// Part 3: Grade the Quiz
-
-// Finally, calculate the candidate's score and print the results. There are no TODOs in this section, just be sure to only modify code that you have written, or add code. Don't remove anything in the file that you haven't written. Doing so may cause your program to behave unexpectedly - and we might not be able to grade it!
-
-// Your task here is to:
-
-//     Compare the candidate answers with the correct answers,
-//     Calculate the candidate's score as a percentage,
-//     Convey to the candidate if they have passed the quiz with an 80% or if they have failed.
-
+}  
 
 function runProgram() {
   askForName();
