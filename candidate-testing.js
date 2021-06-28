@@ -12,9 +12,10 @@ let questions;
 let correctAnswers;
 let candidateAnswers = [];
 let answer;
-let yAnswer;
+let quizAnswers;
+// let yAnswer;
 
-  questions = ["Who was the first American woman in space?", "True or false: 5 kilometer == 5000 meters?", "(5 + 3)/2 * 10 = ?", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "What is the minimum crew size for the ISS?"];
+  questions = ["1) Who was the first American woman in space?", "2) True or false: 5 kilometer == 5000 meters?", "3) (5 + 3)/2 * 10 = ?", "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "5) What is the minimum crew size for the ISS?"];
 
   correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 
@@ -51,30 +52,56 @@ function gradeQuiz(candidateAnswers) {
   
   // assignment 3
 
-
-  console.log(`Candidate Name: ${candidateName}`);
-
-  // let quiz = "";
+  console.log(`\nCandidate Name: ${candidateName}`);
 
   for (let i = 0; i < questions.length; i++){
       let currentquestion = questions[i];
-  let message = `${questions[i]}, Your Answer: ${candidateAnswers[i]}, Correct Answer: ${correctAnswers[i]}`;
-  console.log(message);
-
+  let message1 = `${questions[i]}\nYour Answer: ${candidateAnswers[i]}\nCorrect Answer: ${correctAnswers[i]}\n`;
+  console.log(message1);
   }
+  
+  
+  // (Number of Correct Answers) / (Number of Quiz Questions) * 100
+  
 
-  
-  
-  
-  
-  // console.log(`Candidate Name: ${candidateName}`);
-  // let questions = (`1) Who was the first American woman in space?`);
-  // let yAnswer = (`Your Answer: ${candidateAnswer}`);
-  // let cAnswer = (`Correct Answer: ${correctAnswer}`);
+  for ( let i = 1; i < candidateAnswers.count; i++){
+  }
+      if (candidateAnswers === correctAnswers) {
+         console.log(candidateAnswers);
+      }
 
- 
-  //  let message = question;
-  //  console.log(message);
+  // let quizAnswers;
+  // let results;
+
+  // if (candidateAnswers === correctAnswers) {
+    // quizAnswers++;
+   
+
+  // results = `${quizAnswers} out of ${questions.length}`;
+  // console.log(results);
+
+
+
+
+  // let array;
+
+  // array = [0,1,2,3,4];
+  // // array = [0, 1, 2, 3, 4];
+  // let sum = 0;
+
+  // for (let i = 0; i < array.length; i++)
+  //   sum += array;
+  //   console.log(array + i);
+  
+
+
+  // let arrayTotal = [candidateAnswers];
+  // let sum = 0;
+
+  // for (let i = 0; i < arrayTotal.length; i++)
+  //   sum += arrayTotal[i];
+  
+  
 
 
 // message or response
