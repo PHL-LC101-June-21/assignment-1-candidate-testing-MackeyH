@@ -65,12 +65,28 @@ function gradeQuiz(candidateAnswers) {
 
 // calculate and subtract the correct answers from the wrong answers in candidateAnswers. That would give me "number of correct answers from the user".  I would use this formula     (Number of Correct Answers) / (Number of Quiz Questions) * 100  to get the percentage.  
 
-let score;
-let n = candidateAnswers - correctAnswers;
-score = (n / 5) * 100;
-console.log(score);
 
+  // defines the "points" variable at the 0 index. "points" is where the data from the user's correct "candidateAnswers" are stored. 
+ let points = 0
+  // loops throught the questions array
+for (let i = 0; i < questions.length; i++){
+  // stricly compare arrays
+if (candidateAnswers[i] === correctAnswers[i]){
+//  points++ (keeps adding plus one to "points" via the loop) ex. points++ or points = (points + 1).
+ points = points + 1
+  // console.log(candidateAnswers[i]);
+}
+}
+grade = (points / 5) * 100;
+console.log(`>>> Overall Grade: ${grade}%, ${points} of 5 response are correct <<<`);
 
+// Let passfail = points
+
+// if (points >= 4){
+//   console.log(">>> Status: Passed! <<<");
+// } else (points <= 3) 
+//   console.log(">>> Status: Failed! <<<");
+// }
 
   return grade;
 }  
